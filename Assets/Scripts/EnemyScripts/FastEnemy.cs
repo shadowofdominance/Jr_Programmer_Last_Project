@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class FastEnemy : MonoBehaviour
+public class FastEnemy : BaseEnemy
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Move()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Vector3 direction = (playerTransform.position - transform.position).normalized;
+        enemyRb.AddForce(direction * moveSpeed * 2);
     }
 }

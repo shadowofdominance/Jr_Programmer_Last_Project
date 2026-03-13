@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class BaseEnemy : MonoBehaviour
 {
     protected Rigidbody enemyRb;
     protected Transform playerTransform;
