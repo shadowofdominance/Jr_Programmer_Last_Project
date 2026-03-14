@@ -4,14 +4,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerSpeed;
-    public float rotationSpeed = 10f;
+    [SerializeField]private float playerSpeed;
+    private float rotationSpeed = 10f;
 
     private Rigidbody playerRb;
-    public Camera mainCamera;
+    [SerializeField]private Camera mainCamera;
     private Vector3 moveDirection;
 
-    public InputActionAsset inputActionAsset;
+    [SerializeField]public InputActionAsset inputActionAsset;
     private InputAction moveAction;
 
     private void OnEnable()
